@@ -28,7 +28,7 @@ const SearchInput = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-full order-2  flex justify-around items-center lg:items-center "
+      className="w-full  flex justify-around items-center lg:items-center "
     >
       <Inputs
         type="text"

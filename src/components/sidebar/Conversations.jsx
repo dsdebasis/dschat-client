@@ -5,7 +5,7 @@ import Conversation from "./Conversation.jsx";
 const Conversations = () => {
 	const { loading, conversations } = useGetConversations();
 	return (
-		<div className=' h-[20vh] w-full lg:w-fit lg:h-fit lg:overflow-auto  flex flex-row  lg:flex-col gap-x-2  items-center '>
+		<div className=' h-[20vh] w-full lg:w-full lg:h-full lg:overflow-auto  flex flex-row  lg:flex-col gap-x-2  lg:gap-x-0 lg:ustify-evenly lg:mt-10'>
 			{conversations.map((conversation, idx) => (
 				<Conversation
 					key={conversation._id}
