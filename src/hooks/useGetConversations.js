@@ -10,7 +10,7 @@ const useGetConversations = () => {
 		setLoading(true);
 
 		const getConversations = async () => {
-		axios.get(`${backendUrl}/api/users`,{
+		axios.get(`${backendUrl}/api/users`, {},{
 			withCredentials: true
 		},{
 		
