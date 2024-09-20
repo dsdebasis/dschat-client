@@ -1,3 +1,3 @@
-const backendUrl = "https://dschat.onrender.com/"
+const backendUrl = "https://dschat.onrender.com"
 
 export {backendUrl}
