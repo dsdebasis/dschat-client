@@ -1,11 +1,11 @@
-import useGetConversations from "../../hooks/useGetConversations";
-import { getRandomEmoji } from "../../utils/emojis";
-import Conversation from "./Conversation";
+import useGetConversations from "../../hooks/useGetConversations.js";
+import { getRandomEmoji } from "../../utils/emojis.js";
+import Conversation from "./Conversation.jsx";
 
 const Conversations = () => {
 	const { loading, conversations } = useGetConversations();
 	return (
-		<div className='py-2 flex flex-col overflow-auto'>
+		<div className=' h-[20vh] w-full lg:w-fit lg:h-fit lg:overflow-auto  flex flex-row  lg:flex-col gap-x-2  items-center '>
 			{conversations.map((conversation, idx) => (
 				<Conversation
 					key={conversation._id}
@@ -21,19 +21,4 @@ const Conversations = () => {
 };
 export default Conversations;
 
-// STARTER CODE SNIPPET
-// import Conversation from "./Conversation";
 
-// const Conversations = () => {
-// 	return (
-// 		<div className='py-2 flex flex-col overflow-auto'>
-// 			<Conversation />
-// 			<Conversation />
-// 			<Conversation />
-// 			<Conversation />
-// 			<Conversation />
-// 			<Conversation />
-// 		</div>
-// 	);
-// };
-// export default Conversations;
