@@ -28,20 +28,20 @@ const SearchInput = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-full  flex justify-around items-center lg:items-center "
+      className="w-full order-3  flex justify-around items-center lg:items-center "
     >
       <Inputs
-        type="text"
+        
         placeholder="Search…"
-        css="input input-bordered rounded-full max-h-8 max-w-fit"
+        css=" max-h-8 max-w-fit rounded-md text-xs text-yellow-300"
         handleInput={(e) => setSearch(e.target.value)}
       />
       <button
         type="submit"
-        className="border-2 border-stone-700 h-10 w-10 rounded-full btn btn-xs lg:btn lg:btn-circle    text-white
+        className=" border-stone-700 h-8 w-8 rounded-full btn btn-xs lg:btn lg:btn-circle    bg-transparent hover:bg-orange-600
 	 "
       >
-        <IoSearchSharp className="rounded-full  outline-none" />
+        <IoSearchSharp className="rounded-full  outline-none  " />
       </button>
     </form>
   );

@@ -25,8 +25,8 @@ const Login = () => {
 
         <form onSubmit={handleSubmit} className="w-full flex flex-col gap-y-6  rounded-md">
           <div>
-            <label className="label p-2">
-              <span className="text-base label-text">Username</span>
+            <label className="label p-2 ">
+              <span className="text-base label-text text-yellow-400">Username</span>
             </label>
             <Inputs
               type="text"
@@ -37,7 +37,7 @@ const Login = () => {
 
           <div>
             <label className="label">
-              <span className="text-base label-text">Password</span>
+              <span className="text-base label-text text-yellow-400">Password</span>
             </label>
           
             <Inputs type="password" placeholder="enter your password" handleInput={(e) => setPassword(e.target.value)}/>
