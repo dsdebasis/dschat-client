@@ -11,20 +11,28 @@ body {
 
 /* dark mode looking scrollbar */
 ::-webkit-scrollbar {
-	width: 8px;
+	width: 0.5px;
+	height: 0.4rem;
+        
+	
 }
 
 ::-webkit-scrollbar-track {
-	background: #555;
+	background: #dbe4f7;
+	border-radius: 1rem;
+	
+	
 }
 
 ::-webkit-scrollbar-thumb {
-	background: #121212;
-	border-radius: 5px;
+        background-color: rgb(168, 79, 15);
+	border-radius: 1rem;
+	width:	10%;
+	margin: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: #242424;
+	background: #0e0ed7;
 }
 
 /* SHAKE ANIMATION ON HORIZONTAL DIRECTION */

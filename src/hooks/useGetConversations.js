@@ -11,12 +11,14 @@ const useGetConversations = () => {
 
 		const getConversations = async () => {
 		axios.get(`${backendUrl}/api/users`,{
-			withCredentials: true
+			withCredentials: true,
+
 		} ).then((res) => {
-			// console.log(res.data.data)
+			console.log(res.data.data)
 			setConversations(res.data.data);
 		}).catch((error) => {
 			console.log(error.response.data)
+			toast.error(error.response.data.message);
 		}).finally(() => {
 			setLoading(false);
 		})

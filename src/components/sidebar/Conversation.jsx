@@ -10,26 +10,26 @@ const Conversation = ({ conversation, lastIdx, emoji }) => {
 
   return (
     <>
-      <div
-        className={` border-2 border-stone-700 shadow-2xl bg-gradient-to-l from-stone-800 w-[5.5rem] h-[5.5rem]  text-xs lg:h-[4rem]  lg:w-full flex flex-col justify-center items-center lg:flex-row gap-2  hover:bg-yellow-600 rounded-full cursor-pointer lg:rounded-lg lg:p-2 my-2 ${isSelected ? "bg-gradient-to-r from-orange-500 to-slate-900" : ""}
-			`}
-        onClick={() => setSelectedConversation(conversation)}
-      >
-              <div className={`h-8 w-8 lg:h-14 lg:w-14 avatar ${isOnline ? "online" : ""}`}>
-               <div className="rounded-full shadow-2xl ">
-                  <img src={conversation.profilePic} alt="user avatar" />
-                </div>
-              </div>
+      <section
+        className={`  h-fit p-2 lg:border-2 lg:border-stone-700 w-full   rounded-full  lg:h-full lg:w-full     text-xs  lg:max-h-[9.5vh]  lg:max-w-full flex flex-col   lg:flex-row   lg:hover:bg-yellow-600  cursor-pointer lg:rounded-2xl lg:justify-around lg:items-center  lg:px-2 lg:py-0  ${isSelected ? "lg:bg-gradient-to-bl lg:from-blue-700 lg:to-pink-400" : "" }`} onClick={() => setSelectedConversation(conversation)}>
+             <div className={`h-full w-full place-items-center md:justify-center lg:h-14 lg:w-14 avatar ${isOnline ? "online" : ""}`}>
 
-              <div className=" lg:flex-col lg:flex-1 overflow-hidden text-yellow-300 text-xs">
-                <div className="flex gap-3 lg:justify-between">
-                  <h1 className="font-bold  overflow-hidden text-[0.7rem] lg:text-base">{conversation.fullName}</h1>
-                  <span className="hidden lg:block lg:text-xl">{emoji}</span>
-              </div>
-        </div>
-      </div>
+                   <div  className={`rounded-full shadow-2xl h-[5rem] w-[5rem] lg:max-h-full lg:max-w-full ${isSelected ? "border-4 border-blue-600" :""}`}>
+                     <img src={conversation.profilePic} alt="user avatar"  />
+                   </div>
+             </div>
 
-      {!lastIdx && <div className="divider my-0 py-0 h-1" />}
+            <div className=" lg:w-[70%] flex justify-center items-center  overflow-hidden text-yellow-300 text-xs lg:flex lg:justify-evenly">
+            
+                <h1 className="  overflow-hidden text-[0.9rem] mt-1 lg:m-0 lg:text-base">
+                  {conversation.username}
+                </h1>
+                <h1 className="hidden lg:block lg:text-xl">{emoji}</h1>
+              
+            </div>
+      </section>
+
+      {!lastIdx && <div className="divider my-0 py-0 h-1 border-b-2 border-stone-500" />}
     </>
   );
 };

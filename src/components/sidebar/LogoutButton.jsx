@@ -5,9 +5,9 @@ const LogoutButton = () => {
 	const { loading, logout } = useLogout();
 
 	return (
-		<div className='order-3 self-start lg:order-0  '>
+		<div className='absolute bottom-1 md:bottom-1  right-4 lg:static lg:self-start lg:order-0  '>
 			{!loading ? (
-				<BiLogOut className='lg:w-6 lg:h-6 text-white cursor-pointer' onClick={logout} />
+				<BiLogOut className='lg:w-6 lg:h-6 text-orange-300 lg:text-white cursor-pointer' onClick={logout} />
 			) : (
 				<span className='loading loading-spinner'></span>
 			)}
